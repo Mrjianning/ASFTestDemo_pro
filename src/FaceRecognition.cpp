@@ -107,6 +107,7 @@ void FaceRecognition::getSdkRelatedInfo()
     printf("\nVersion:%s\n", version.Version);
     printf("BuildDate:%s\n", version.BuildDate);
     printf("CopyRight:%s\n", version.CopyRight);
+    
 }
 
 // 人脸检测
