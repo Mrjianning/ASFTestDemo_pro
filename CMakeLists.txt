@@ -41,3 +41,10 @@ target_link_libraries(arcsoft_face_engine_test
 		${OpenCV_LIBS}
 		nlohmann_json::nlohmann_json
         )
+
+ # 在构建后复制库文件到 workspace 目录
+add_custom_command(TARGET arcsoft_face_engine_test POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${PROJECT_SOURCE_DIR}/linux_so ${PROJECT_SOURCE_DIR}/workspace
+    COMMENT "复制库文件到 workspace 目录"
+)
